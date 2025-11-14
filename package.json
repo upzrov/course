@@ -1,0 +1,15 @@
+{
+  "name": "course",
+  "module": "index.ts",
+  "scripts": {
+    "start": "bun /pl"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "private": true,
+  "type": "module"
+}
