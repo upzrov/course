@@ -15,9 +15,9 @@ export class ConsoleMenu {
   private searchMenuHandler: SearchMenuHandler;
 
   constructor(
-    private playerService: PlayerService,
-    private gameService: GameService,
-    private stadiumService: StadiumService
+    playerService: PlayerService,
+    gameService: GameService,
+    stadiumService: StadiumService
   ) {
     this.playerMenuHandler = new PlayerMenuHandler(playerService);
     this.gameMenuHandler = new GameMenuHandler(gameService);
