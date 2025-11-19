@@ -1,7 +1,8 @@
 import { randomUUIDv7 } from "bun";
 import { HealthStatus, PlayerStatus } from "../enums";
+import type { Identifiable } from "./identifiable";
 
-export class Player {
+export class Player implements Identifiable {
   private _id: string;
   private _firstName: string;
   private _lastName: string;

@@ -1,7 +1,8 @@
 import { randomUUIDv7 } from "bun";
 import { GameResult } from "../enums";
+import type { Identifiable } from "./identifiable";
 
-export class Game {
+export class Game implements Identifiable {
   private _id: string;
   private _gameDate: Date;
   private _location: string; // Або ID стадіону

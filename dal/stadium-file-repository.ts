@@ -1,6 +1,5 @@
 import { promises as fs } from "fs";
 import * as path from "path";
-
 import { Stadium } from "../bll/models/stadium";
 
 import type { IStadiumRepository } from "./stadium-repository";
@@ -91,4 +90,3 @@ export class StadiumFileRepository implements IStadiumRepository {
     );
   }
 }
-

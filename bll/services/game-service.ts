@@ -54,9 +54,7 @@ export class GameService {
   async removePlayerFromGame(gameId: string, playerId: string): Promise<Game> {
     const game = await this.getGameById(gameId);
     if (!game.playerIds.includes(playerId)) {
-      throw new BusinessLogicException(
-        "Player is not assigned to this game."
-      );
+      throw new BusinessLogicException("Player is not assigned to this game.");
     }
     game.removePlayer(playerId);
     return this.gameRepository.update(game);
@@ -122,9 +120,7 @@ export class GameService {
 
   async getGamesSortedByDate(): Promise<Game[]> {
     const games = await this.getAllGames();
-    return games.sort(
-      (a, b) => a.gameDate.getTime() - b.gameDate.getTime()
-    );
+    return games.sort((a, b) => a.gameDate.getTime() - b.gameDate.getTime());
   }
 
   async getGamesByResult(result: GameResult): Promise<Game[]> {
@@ -152,4 +148,3 @@ export class GameService {
     );
   }
 }
-

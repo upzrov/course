@@ -1,6 +1,7 @@
 import { randomUUIDv7 } from "bun";
+import type { Identifiable } from "./identifiable";
 
-export class Stadium {
+export class Stadium implements Identifiable {
   private _id: string;
   private _name: string;
   private _capacity: number;
